@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><!--
+
+Design by Alicia A Jasmine
+
+http://www.100webhosting.com
+
+Released for free under a Creative Commons Attribution 3.0 License
+
+
+
+Name : Professional
+
+Description: A two-column, fixed-width design with blue color scheme. Great for corporate, professional and even personal websites.
+
+Version : 1.0
+
+Released : 29-01-2011
+
+-->
+
+
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"><title>Generating Genius Computing</title>
+  
+
+  
+  
+  <meta name="description" content="">
+
+  
+  <meta name="keywords" content="">
+
+  
+  <link href="style.css" rel="stylesheet" type="text/css"></head><body>
+<div id="header">
+<div id="logo">
+<h1><span><a href="index.html">Paul Halloran<br>
+</a></span></h1>
+</div>
+<div id="menu">
+<ul>
+  <li class="first"><a href="index.html">About</a></li>
+  <li><a href="GeneratingGenius2016Computing.html">Classroom exercise</a></li>
+  <li><a href="GeneratingGenius2016GoingOutside.html">Autonomous
+measurements</a></li>
+  <li><a href="GeneratingGenius2016Homework.html">Analysis/Homework</a></li>
+</ul>
+</div>
+</div>
+
+<div id="headershadow"><a href="#"><img style="border: 0px solid ; width: 877px; height: 150px;" src="images/pi.jpg" alt=""></a></div>
+
+<div id="content">
+<div class="first" id="maincontent">
+<h2>Generating Genius Computing Exercise<br>
+</h2>
+
+<p>These instructions will lead you through how to build your
+temperature and humidity sensor.<br>
+<br>
+</p>
+<h2>What is the Raspberry Pi computer that we will be using?</h2>
+<br>
+<li>A good introduction can be found <a href="https://player.vimeo.com/video/90103691?title=0&amp;byline=0&amp;portrait=0&amp;color=cccccc" target="_blank">here</a></li>
+<li>The computer that we've lent each of you is a Raspberry Pi 3. The
+figure below labels what some of the generic bits are:<br>
+</li>
+<ol>
+  <h2> </h2>
+  <br>
+  <img style="width: 338px; height: 253px;" alt="sensor" src="images/GenGenius/pi.png"><br>
+</ol>
+<li>The Raspberry Pi has no power button, it switches on as soon as the
+power cable is connected - so before we connect the power we need to
+connect each of the following:
+</li>
+<ul>
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USB keyboard<br>
+  </li>
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USB mouse<br>
+  </li>
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ethernet cable (connected at the
+other end to a network socket<br>
+  </li>
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HDMI cable connected at the other
+end to TV or monitor<br>
+  </li>
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Micro SD card<br>
+  </li>
+</ul>
+<br>
+<li>Once your Raspberry Pi is plugged in it will load to a screen
+looking something like that below. Feel free to have a bit of a play
+and get a feel for it - you will find
+that it is very similar to what you are used to with any other
+computer.
+</li>
+<ol>
+  <h2> </h2>
+  <br>
+  <img style="width: 338px; height: 253px;" alt="sensor" src="images/GenGenius/step5_client1.png"><br>
+</ol>
+<br>
+<h2>Setting up the sensor hardware</h2>
+<br>
+<li>Make sure that your Raspberry Pi has been shut down and is
+unplugged from the power supply<br>
+</li>
+<br>
+<li>We then need to plug the temperature and humidity sensor:<br>
+</li>
+<ol>
+  <h2> </h2>
+  <br>
+  <img style="width: 338px; height: 253px;" alt="sensor" src="images/GenGenius/IMG_0631.JPG"><br>
+</ol>
+<li>into the Raspberry Pi's General Purpose Input Output (GPIO) pins:<br>
+</li>
+<ol>
+  <h2> </h2>
+  <br>
+  <img style="width: 338px; height: 253px;" alt="sensor" src="images/GenGenius/gpio.png"><br>
+</ol>
+<li>These pins (or connectors) allow the Raspberry Pi to talk to and
+receive input from the real world. The diagram below shows you what the
+different pins are and names them. The ones that you will have to worry
+about are the ones that output electric current at 3.3v (similar to a
+battery), and any of the 'Ground' pins which are the points against
+which the voltage to any other pin can be measured - see <a href="https://en.wikipedia.org/wiki/Ground_%28electricity%29">http://en.wikipedia.org/wiki/Ground_(electricity)</a>.
+In this situation we've chosen to use GPIO pin 4 (as well as the 3.3V
+and ground pins).</li>
+<ol>
+  <h2> </h2>
+  <br>
+</ol>
+<img style="width: 800px; height: 600px;" alt="sensor" src="images/GenGenius/gpio2.png">
+<ol>
+  <br>
+</ol>
+<li>The temperature/humidity sensor you've got is called a DHT22.</li>
+<br>
+<span style="font-style: italic;">Background: If
+you are interested in the details about this sensor see </span><a style="font-style: italic;" href="https://www.adafruit.com/datasheets/DHT22.pdf">here.</a><span style="font-style: italic;"> It measures temperature by measuring how
+hard it is to push
+electricity through a thermistor (a conductor that conducts better at
+higher temperatures and worse at lower temperatures), it then measures
+humidity by measuring how efficiently a special capacitor inside the
+sensor can work - this works because moist air allows the charge held
+by the capacitor to leak away. Rather than us having to convert the
+resistance and capacitance within this sensor into a temperature and
+humidity as we would have to do if this was an analogue sensor, the
+DHT22 converts this information into a digital signal. This digital
+signal is communicated to the Raspberry Pi by very briefly diverting
+the current that was coming in from the 3.3v pin and out to the ground
+pin, across to the middle (brown) wire coming out of the sensor. The
+length and pattern of this voltage across the middle wire is encoding
+the information about temperature and humidity. All we need to do
+therefore is measure when there is a voltage change across out GPIO pin
+on the Raspberry Pi and we can work out what the temperature and
+humidity is - simple!</span><br>
+<br>
+<li>The sensor has a white, brown and purple wire soldered to it, then
+three arbitrary coloured connector wires soldered to the ends of them:<br>
+</li>
+<ol>
+  <h2> </h2>
+  <br>
+</ol>
+<img style="width: 338px; height: 253px;" alt="sensor" src="images/GenGenius/IMG_0630.jpg">
+<ol>
+  <br>
+</ol>
+<li>The black bits on the end of the wires can slide over the Raspberry
+Pi
+GPIO pins to connect the sensor to the Raspberry Pi. You now need to
+connect:<br>
+  <ol type="I">
+    <li>The white wire coming from the sensor to the 3.3v pin (see
+diagram
+above)<br>
+    </li>
+    <li>The brown wire coming from the sensor to the GPIO pin 4<br>
+    </li>
+    <li>The purple wire coming from the sensor to one of the ground pins<br>
+    </li>
+REMEMBER THAT THE COLOURED WIRES THAT PUSH ON TO THE GPIO PINS ARE
+RANDOM COLOURS, IGNORE THE COLOURS OF THESE!<br>
+  </ol>
+It should look something like this:
+  <h2> </h2>
+  <br>
+  <img style="width: 338px; height: 253px;" alt="sensor" src="images/GenGenius/IMG_0632.JPG">
+  <ol>
+    <br>
+  </ol>
+  <br>
+  <h2>Setting up the software</h2>
+</li>
+<li>Make sure the ethernet cable is connected to your Raspberry Pi
+(and to the wall), then plug in the power cable to started the
+Raspberry Pi up...<br>
+</li>
+<br>
+<li>To allow us to read data from the sensor, and store this data, we
+need to install various pieces of software. To do this we need to open
+the 'terminal', and type various commands in to this. The 'terminal'
+window is our way of controling the computer powerfully - the image
+below explains how to open it.<br>
+</li>
+<h2> </h2>
+<br>
+<img style="width: 450px; height: 253px;" alt="terminal" src="images/GenGenius/pi_desktop.png">
+<ol>
+  <br>
+</ol>
+<br>
+<li>Next, type (or copy) the following in to the terminal, pressing
+enter after each one. NOTE, read the output from each command, and if
+it asks you a question type 'Y' to say 'yes', then press enter.<br>
+</li>
+<ul>
+  <font color="red">
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;git clone
+https://github.com/adafruit/Adafruit_Python_DHT.git </li>
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd Adafruit_Python_DHT </li>
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get upgrade </li>
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get update </li>
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get install
+build-essential python-dev </li>
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sudo python setup.py install </li>
+  </font>
+</ul>
+<li>You are now ready to run the downloaded software to see what
+temperature and humidity the sensor is reading. Do this by typing: <br>
+</li>
+<ul>
+  <font color="red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sudo python
+/home/pi/Adafruit_Python_DHT/examples/AdafruitDHT.py
+22 4 </font>
+</ul>
+<span style="font-style: italic;">Background: This is saying that as
+a superuser (so that you have the correct
+permissions) run a python script in the directory
+/home/pi/Adafruit_Python_DHT/examples/ called AdafruitDHT.py, and feed
+it two numbers, 22 is the name of the sensor (DHT22) and 4 is the
+number of the GPIO pin it will be receiving the signal
+on. Does it work? If not, go back and follow the instructions carefully
+again to make sure that you have done everything exactly right!
+If it does, well done! You've made your Raspberry Pi do something that
+you could not make any normal computer, phone, tablet do without
+buying some very expensive equipment! </span></div>
+<br>
+<h2> </h2>
+<br>
+<img style="width: 400px; height: 400px;" alt="terminal" src="images/GenGenius/temp_hum.png">
+<ol>
+  <br>
+</ol>
+<h2>Setting up the final piece of software which will log the
+temperature and humidity data</h2>
+<li>We will start by downloading a script we've written for you to
+make the measuremenst and upload them to the web. To download the
+script, type the following in to your terminal (pressing enter after
+each line):</li>
+<ul>
+  <font color="red">
+  <li style="margin-left: 30px;">cd</li>
+  <li style="margin-left: 30px;">wget
+http://people.exeter.ac.uk/ph290/ftp/generating_genius.py </li>
+  </font> <br>
+  <li>Now
+open the file in a text editor (a program to edit text - here it is
+called leafpad, but think of this as an alternative to Microsoft Word)
+by typing:</li>
+  <ul>
+    <font color="red">
+    <li style="margin-left: 30px;">leafpad generating_genius.py </li>
+    </font> <br>
+    <li>Edit the file that says <font color="green">group = 'groupx'</font>
+to contain the
+number relating to your group e.g. <font color="green">group = 'group1'</font>,
+save the file, then close the text editor<br>
+    </li>
+    <br>
+    <li>We can now run this script by typing:</li>
+    <ul>
+      <font color="red">
+      <li style="margin-left: 30px;">sudo python
+generating_genius.py </li>
+      </font> <br>
+      <li>Can
+you see the data appearing on the web here - but note that here will be
+a delay of about a minute before this data starts appearing:</li>
+      <ul>
+        <li>Group1: <a href="https://thingspeak.com/channels/105075" target="_blank">https://thingspeak.com/channels/105075</a></li>
+        <li>Group2: <a href="https://thingspeak.com/channels/105074" target="_blank">https://thingspeak.com/channels/105074</a></li>
+        <li>Group3: <a href="https://thingspeak.com/channels/105078" target="_blank">https://thingspeak.com/channels/105078</a></li>
+        <li>Group4: <a href="https://thingspeak.com/channels/105079" target="_blank">https://thingspeak.com/channels/105079</a></li>
+        <li>Group5: <a href="https://thingspeak.com/channels/105080" target="_blank">https://thingspeak.com/channels/105080</a></li>
+        <li>Group6: <a href="https://thingspeak.com/channels/105081" target="_blank">https://thingspeak.com/channels/105081</a></li>
+        <li>Group7: <a href="https://thingspeak.com/channels/105083" target="_blank">https://thingspeak.com/channels/105083</a></li>
+        <li>Group8: <a href="https://thingspeak.com/channels/105084" target="_blank">https://thingspeak.com/channels/105084</a></li>
+      </ul>
+    </ul>
+  </ul>
+</ul>
+<br>
+<div id="footer"><!-- Please leave the link to http://www.100webhosting.com intact --><br>
+</div>
+<br>
+<br>
+</div>
+
+</body></html>

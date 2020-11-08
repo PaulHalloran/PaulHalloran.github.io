@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<!--
+
+Design by Alicia A Jasmine
+
+http://www.100webhosting.com
+
+Released for free under a Creative Commons Attribution 3.0 License
+
+
+
+Name : Professional
+
+Description: A two-column, fixed-width design with blue color scheme. Great for corporate, professional and even personal websites.
+
+Version : 1.0
+
+Released : 29-01-2011
+
+-->
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Generating Genius Data Collection</title>
+
+  
+  
+  <meta name="description" content="">
+
+  
+  <meta name="keywords" content="">
+
+  
+  <link href="style.css" rel="stylesheet" type="text/css">
+
+</head><body>
+<div id="header">
+<div id="logo">
+<h1><span><a href="index.html">Paul Halloran<br>
+</a></span></h1>
+</div>
+<div id="menu">
+<ul>
+  <li class="first"><a href="index.html">About</a></li>
+  <li><a href="GeneratingGenius2016Computing.html">Classroom exercise</a></li>
+  <li><a href="GeneratingGenius2016GoingOutside.html">Autonomous
+measurements</a></li>
+  <li><a href="GeneratingGenius2016Homework.html">Analysis/Homework</a></li>
+</ul>
+</div>
+</div>
+
+<div id="headershadow"><a href="#"><img style="border: 0px solid ; width: 877px; height: 150px;" src="images/pi.jpg" alt=""></a></div>
+
+<div id="content">
+<div class="first" id="maincontent">
+<h2>Generating Genius Autonomous Data Collection<br>
+</h2>
+<p>We will now set up the Raspberry Pi sensor so that it can be used as
+a standalone data logger.<br>
+<br>
+</p>
+<h2>Setting up wifi access<br>
+</h2>
+Do this by typing the following line into the terminal (whilst plugged
+into the ethernet), and following the instructions:
+<ul>
+  <font color="red">
+  <li style="margin-left: 30px;">wget
+http://people.exeter.ac.uk/ph290/ftp/set_up_wifi.py </li>
+  <li style="margin-left: 30px;">sudo python set_up_wifi.py </li>
+  </font> <br>
+  <li style="margin-left: 30px;">Reboot the Raspberry Pi from the menu
+in the top left corner </li>
+  <br>
+</ul>
+<br>
+<h2>Setting the equipment off to collect data as soon as it powers up<br>
+</h2>
+Do this by typing the following line into the terminal, and following
+the instructions:
+<ul>
+  <font color="red">
+  <li style="margin-left: 30px;">crontab -e<br>
+  </li>
+  </font>
+  <li style="margin-left: 30px;">type: <font color="red">2</font>
+(this will open the file up so
+that we can edit it)<br>
+  </li>
+  <li style="margin-left: 30px;">scroll down to the bottom of this page
+using the arrow keys, then type:</li>
+  <li style="margin-left: 30px;"><font color="red">@reboot sudo python
+/home/pi/generating_genius.py&amp;</font></li>
+  <li style="margin-left: 30px;">press: <font color="red">Ctrl + O</font>
+(i.e. the control key and the 'o' key)</li>
+  <li style="margin-left: 30px;">press: Press the enter key to agree
+that you want to use the original file name</li>
+  <li style="margin-left: 30px;">then press <font color="red">Ctrl + X</font>
+(i.e. the control key and the 'x' key)</li>
+</ul>
+<br>
+Now reboot the Raspberry Pi, and look at the web page to see if it
+is automatically collecting data. Note that there will be a short delay
+to ensure that the computer has fully started up.<br>
+<br>
+<br>
+<h2>Preparing the equipment for deployment<br>
+</h2>
+Place the equipment in the weatherproof containers as shown by the
+teaching staff (and displayed below), ensuring
+that the temperature sensor is sticking out of the hole (but still
+under cover) and connected to the pins on the Raspberry Pi as before.
+Plug the Raspberry Pi power cable in to the battery pack, then you are
+ready to go (no other cables need be attached). Test the equipment is
+working by switching the battery pack on (square button on top) - is it
+collecting data - take a look on the web?
+<br>
+<br>
+If everything is working, switch off the power, and we are ready to
+deploy.
+<br>
+<br>
+Remember, you can you see the data appearing on the web
+here:
+<ul>
+  <li>Group1: <a href="https://thingspeak.com/channels/105075" target="_blank">https://thingspeak.com/channels/105075</a></li>
+  <li>Group2: <a href="https://thingspeak.com/channels/105074" target="_blank">https://thingspeak.com/channels/105074</a></li>
+  <li>Group3: <a href="https://thingspeak.com/channels/105078" target="_blank">https://thingspeak.com/channels/105078</a></li>
+  <li>Group4: <a href="https://thingspeak.com/channels/105079" target="_blank">https://thingspeak.com/channels/105079</a></li>
+  <li>Group5: <a href="https://thingspeak.com/channels/105080" target="_blank">https://thingspeak.com/channels/105080</a></li>
+  <li>Group6: <a href="https://thingspeak.com/channels/105081" target="_blank">https://thingspeak.com/channels/105081</a></li>
+  <li>Group7: <a href="https://thingspeak.com/channels/105083" target="_blank">https://thingspeak.com/channels/105083</a></li>
+  <li>Group8: <a href="https://thingspeak.com/channels/105084" target="_blank">https://thingspeak.com/channels/105084</a></li>
+</ul>
+<br>
+<br>
+<ol>
+  <img style="width: 338px; height: 253px;" alt="sensor" src="images/GenGenius/IMG_3653.JPG">
+</ol>
+<br>
+<ol>
+  <img style="width: 338px; height: 253px;" alt="sensor" src="images/GenGenius/IMG_3654.JPG">
+</ol>
+<br>
+<br>
+<h2>Deploying the equipment</h2>
+<h2> </h2>
+You will deploy the equipment during the next academic session, so each
+group will have to take the equipment away with them. The following
+instructions tell you where to place the equipment. When you deploy
+this, be sure to press the power button on the battery, and check that
+the lights on the Raspberry Pi have come on!
+<br>
+<br>
+The map below shows you the broad locations for deployment by each
+group. The numbers in the black circles relate to each of the group
+numbers.
+The photos below that show the specific deployment locations,
+highlighted by red circles.<br>
+<br>
+PLEASE ALWAYS PLACE THE EQUIPMENT IN A DESCRETE PLACE AT THE IDENTIFIED
+SITE TO AVOID UNWANTED ATTENTION.<br>
+<br>
+<ol>
+  <img style="width: 500px; height: 500px;" alt="sensor" src="images/GenGenius/deployment_map.png">
+</ol>
+<br>
+<br>
+<h3>Group 1</h3>
+Behind (uphill from) the Laver building, on the manhole cover.
+<br>
+<ol>
+  <img style="width: 338px; height: 253px;" alt="sensor" src="images/GenGenius/IMG_3641.JPG">
+</ol>
+<br>
+<br>
+<ol>
+  <img style="width: 300px; height: 300px;" alt="sensor" src="images/GenGenius/group1_googlemaps.jpg">
+</ol>
+<br>
+<br>
+<h3>Group 2</h3>
+On the little balcony between the Laver and Harison buildings.<br>
+<ol>
+  <img style="width: 338px; height: 253px;" alt="sensor" src="images/GenGenius/IMG_3643.JPG">
+</ol>
+<br>
+<br>
+<ol>
+  <img style="width: 300px; height: 300px;" alt="sensor" src="images/GenGenius/group2_googlemaps.jpg">
+</ol>
+<br>
+<br>
+<h3>Group 3</h3>
+At the base of the tree off the path to the right a few steps down the
+path
+oposite the bottom of the Laver building.
+<br>
+<ol>
+  <img style="width: 253px; height: 338px;" alt="sensor" src="images/GenGenius/IMG_3645.JPG">
+</ol>
+<br>
+<br>
+<ol>
+  <img style="width: 253px; height: 338px;" alt="sensor" src="images/GenGenius/IMG_3644.JPG">
+</ol>
+<br>
+<br>
+<ol>
+  <img style="width: 300px; height: 300px;" alt="sensor" src="images/GenGenius/group3_googlemaps.jpg">
+</ol>
+<br>
+<br>
+<h3>Group 4</h3>
+<font color="orange">NOTE: moved to the top of the slope, towards the
+road to improve WiFi signal.</font> At the base of the tree in front of
+the pond down the hill from Laver,
+and close to the campus entrance. <br>
+<ol>
+  <img style="width: 338px; height: 253px;" alt="sensor" src="images/GenGenius/IMG_3646.JPG">
+</ol>
+<br>
+<br>
+<ol>
+  <img style="width: 300px; height: 300px;" alt="sensor" src="images/GenGenius/group4_googlemaps.jpg">
+</ol>
+<br>
+<br>
+<h3>Group 5</h3>
+<font color="orange">Note: moved to the roof of Amory, underneath the
+pollen counter due to external reasons.</font> Underneath the fold-up
+sign at the top of teh three steps at the
+entrance to the Xfi building.
+<br>
+<ol>
+  <img style="width: 338px; height: 253px;" alt="sensor" src="images/GenGenius/IMG_3649.JPG">
+</ol>
+<br>
+<br>
+<ol>
+  <img style="width: 300px; height: 300px;" alt="sensor" src="images/GenGenius/group5_googlemaps.jpg">
+</ol>
+<br>
+<br>
+<h3>Group 6</h3>
+Behind the short wall behind the cafe in Building:One. Note, the WiFi
+signal is weak, so place it close to the right-angle in the wall to
+ensure good signal strength.
+<br>
+<ol>
+  <img style="width: 338px; height: 253px;" alt="sensor" src="images/GenGenius/IMG_3651.JPG">
+</ol>
+<br>
+<br>
+<ol>
+  <img style="width: 300px; height: 300px;" alt="sensor" src="images/GenGenius/group6_googlemaps.jpg">
+</ol>
+<br>
+<br>
+<br>
+<div id="footer"><!-- Please leave the link to http://www.100webhosting.com intact --><br>
+</div>
+<br>
+<br>
+</div>
+</div>
+
+</body></html>
