@@ -1,0 +1,135 @@
+
+<html>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+  google.charts.load("current", {packages:["timeline"]});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+
+
+    var container = document.getElementById('timeline');
+    var chart = new google.visualization.Timeline(container);
+    var dataTable = new google.visualization.DataTable();
+    dataTable.addColumn({ type: 'string', id: 'Position' });
+    dataTable.addColumn({ type: 'string', id: 'Name' });
+    dataTable.addColumn({ type: 'string', role: 'style' });
+    dataTable.addColumn({ type: 'date', id: 'Start' });
+    dataTable.addColumn({ type: 'date', id: 'End' });
+
+    dataTable.addRows([
+        <!-- note, months are zero indexed -->
+
+        [ 'WP1: Design', 'Preliminarydesign phase and documentation requirements','color: #ff504d;' + 'stroke-width: 1.5;' + 'stroke-color: #808080', new Date(2022, 04, 20), new Date(2022, 10, 04)],
+        [ 'WP1: Design', 'Site specific designs and requirements report accepted','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #808080', new Date(2022, 10, 20), new Date(2022, 10, 20)],
+        [ 'WP1: Design', 'Detailed design (mech, elec, software)','color: #ff504d;' + 'stroke-width: 1.5;' + 'stroke-color: #808080', new Date(2022, 09, 30), new Date(2022, 11, 21)],
+        [ 'WP1: Design', 'Detailed design report and recommendations accepted','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #808080', new Date(2022, 11, 21), new Date(2022, 11, 21)],
+        [ 'WP1: Build', 'Procurement phase (materials)','color: #ff504d;' + 'stroke-width: 1.5;' + 'stroke-color: #808080', new Date(2022, 10, 19), new Date(2023, 04, 04)],
+        [ 'WP1: Build', 'Assemble key components offsite','color: #ff504d;' + 'stroke-width: 1.5;' + 'stroke-color: #808080', new Date(2023, 01, 11), new Date(2023, 04, 04)],
+        [ 'WP1: Build', 'Control software & operation planning','color: #ff504d;' + 'stroke-width: 1.5;' + 'stroke-color: #808080', new Date(2023, 04, 03), new Date(2023, 04, 17)],
+        [ 'WP1: Build', 'Control software & operation manuals accepted','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #808080', new Date(2023, 04, 17), new Date(2023, 04, 17)],
+        [ 'WP1: Build', 'Health & Safety planning and documentation','color: #ff504d;' + 'stroke-width: 1.5;' + 'stroke-color: #808080', new Date(2023, 04, 04), new Date(2023, 07, 11)],
+        [ 'WP1: Build', 'Complete HAZOPS & HAZID reports signed off','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #808080', new Date(2023, 07, 11), new Date(2023, 07, 11)],
+        [ 'WP1: Build', 'Site preparation','color: #ff504d;' + 'stroke-width: 1.5;' + 'stroke-color: #808080', new Date(2023, 02, 22), new Date(2023, 04, 05)],
+        [ 'WP1: Build', 'Assembly','color: #ff504d;' + 'stroke-width: 1.5;' + 'stroke-color: #808080', new Date(2023, 04, 05), new Date(2023, 09, 26)],
+        [ 'WP1: Build', 'Assembled plant (video)','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #808080', new Date(2023, 09, 26), new Date(2023, 09, 26)],
+        [ 'WP1: Commissioning', 'Commissioning sign off','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #000000', new Date(2023, 10, 27), new Date(2023, 10, 27)],
+        [ 'WP1: Commissioning', 'Operation trials','color: #ff504d;' + 'stroke-width: 1.5;' + 'stroke-color: #000000', new Date(2023, 10, 27), new Date(2023, 11, 17)],
+        [ 'WP1: Commissioning', 'Operation trial report ','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #000000', new Date(2023, 11, 17), new Date(2023, 11, 17)],
+        [ 'WP1: Operation Phase', 'Continuous operation experiment','color: #ff504d;' + 'stroke-width: 1.5;' + 'stroke-color: #000000', new Date(2024, 01, 15), new Date(2024, 04, 15)],
+        [ 'WP1: Operation Phase', 'Demonstration of continuous operation evidence report signed off','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #000000', new Date(2024, 09, 20), new Date(2024, 09, 20)],
+        [ 'WP1: Operation Phase', 'Review meeting lessons learned','color: #ff504d;' + 'stroke-width: 1.5;' + 'stroke-color: #000000', new Date(2024, 10, 04), new Date(2024, 10, 04)],
+        [ 'WP1: Licensing', 'Progress abstraction/discharge licensing with EA','color: #ff504d;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2022, 04, 20), new Date(2022, 10, 25)],
+        [ 'WP2: CO2 Stripper Project', 'Test system design','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #008000', new Date(2022, 04, 20), new Date(2022, 05, 20)],
+        [ 'WP2: CO2 Stripper Project', 'Procurement','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #008000', new Date(2022, 05, 20), new Date(2022, 06, 10)],
+        [ 'WP2: CO2 Stripper Project', 'CO2 stripper system build','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #008000', new Date(2022, 06, 10), new Date(2022, 07, 11)],
+        [ 'WP2: CO2 Stripper Project', 'Test results','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #008000', new Date(2022, 07, 11), new Date(2022, 07, 25)],
+        [ 'WP2: CO2 Stripper Project', 'Optimise delivery','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #008000', new Date(2022, 07, 25), new Date(2022, 08, 25)],
+        [ 'WP2: CO2 Stripper Project', 'Design 3000 l/m system','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #008000', new Date(2022, 08, 25), new Date(2022, 10, 06)],
+        [ 'WP2: CO2 Stripper Project', 'Optimised CO2 stripping and pilot design','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #008000', new Date(2022, 10, 06), new Date(2022, 10, 20)],
+        [ 'WP2: CO2 Stripper Project', 'Optimised CO2 stripping and pilot design report accepted','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #008000', new Date(2022, 10, 20), new Date(2022, 10, 20)],
+        [ 'WP2: System verification (inc MRV)', 'Configure high resolution dilution model - Weymouth Bay','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2022, 05, 23), new Date(2022, 06, 23)],
+        [ 'WP2: System verification (inc MRV)', 'Simulate dilution of outflow','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2022, 06, 27), new Date(2022, 07, 27)],
+        [ 'WP2: System verification (inc MRV)', 'Dilution model results and verification','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2022, 07, 28), new Date(2022, 08, 26)],
+        [ 'WP2: System verification (inc MRV)', 'Finalise MRV methodology','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2023, 01, 16), new Date(2023, 02, 27)],
+        [ 'WP2: System verification (inc MRV)', 'Co2 removal system verification','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2024, 01, 22), new Date(2024, 03, 22)],
+        [ 'WP2: System verification (inc MRV)', 'Contribution to commissioning ','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2024, 03, 25), new Date(2024, 04, 08)],
+        [ 'WP2: System verification (inc MRV)', 'Tracer release experiments (design and implement)','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2024, 01, 22), new Date(2024, 02, 22)],
+        [ 'WP2: System verification (inc MRV)', 'Model simulation tracer release','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2024, 02, 26), new Date(2024, 03, 26)],
+        [ 'WP2: System verification (inc MRV)', 'MRV report written','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2024, 03, 26), new Date(2024, 04, 09)],
+        [ 'WP2: System verification (inc MRV)', 'MRV report accepted','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2024, 04, 09), new Date(2024, 04, 09)],
+        [ 'WP2: System verification (inc MRV)', 'Configure large scale model','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2024, 04, 22), new Date(2024, 05, 22)],
+        [ 'WP2: System verification (inc MRV)', 'Large scale model simulations','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2024, 05, 22), new Date(2024, 06, 24)],
+        [ 'WP2: System verification (inc MRV)', 'Technical commercial scale plant MRV study','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2024, 06, 24), new Date(2024, 07, 08)],
+        [ 'WP2: System verification (inc MRV)', 'Technical commercial scale plant MRV report accepted','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2024, 07, 08), new Date(2024, 07, 08)],
+        [ 'WP2: System verification (inc MRV)', 'Review meeting lessons learned','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2024, 07, 15), new Date(2024, 07, 15)],
+        [ 'WP2: Environmental Impact Assessment', 'EIA literature review','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #008000', new Date(2022, 04, 20), new Date(2022, 06, 20)],
+        [ 'WP2: Environmental Impact Assessment', 'EIA Literature review low DIC impacts summary ','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #008000', new Date(2022, 07, 20), new Date(2022, 07, 20)],
+        [ 'WP2: Environmental Impact Assessment', 'Step 1 Culture experiment design','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000000', new Date(2022, 07, 21), new Date(2022, 08, 19)],
+        [ 'WP2: Environmental Impact Assessment', 'Step 1 Culture experiment design accepted','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #000000', new Date(2022, 08, 19), new Date(2022, 08, 19)],
+        [ 'WP2: Environmental Impact Assessment', 'Step 1 procure consumables','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000000', new Date(2022, 09, 01), new Date(2022, 09, 30)],
+        [ 'WP2: Environmental Impact Assessment', 'Step 1 obtain cultures','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000000', new Date(2022, 09, 01), new Date(2022, 09, 30)],
+        [ 'WP2: Environmental Impact Assessment', 'Step 1 conduct culture experiments','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000000', new Date(2022, 10, 03), new Date(2023, 02, 03)],
+        [ 'WP2: Environmental Impact Assessment', 'Step 1 Culture experiments report written','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000000', new Date(2023, 02, 03), new Date(2023, 02, 17)],
+        [ 'WP2: Environmental Impact Assessment', 'Step 1 Culture experiments report accepted','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #000000', new Date(2023, 02, 17), new Date(2023, 02, 17)],
+        [ 'WP2: Environmental Impact Assessment', 'Step 2 culture experiment design','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000000', new Date(2023, 04, 20), new Date(2023, 05, 22)],
+        [ 'WP2: Environmental Impact Assessment', 'Step 2 Culture experiment design accepted','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #000000', new Date(2023, 05, 22), new Date(2023, 05, 22)],
+        [ 'WP2: Environmental Impact Assessment', 'Step 2 procure consumables','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000000', new Date(2023, 05, 22), new Date(2023, 06, 22)],
+        [ 'WP2: Environmental Impact Assessment', 'Step 2 obtain cultures','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000000', new Date(2023, 05, 22), new Date(2023, 06, 22)],
+        [ 'WP2: Environmental Impact Assessment', 'Step 2 conduct culture experiments','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000000', new Date(2023, 06, 26), new Date(2023, 09, 20)],
+        [ 'WP2: Environmental Impact Assessment', 'Step 2 culture experiment report written','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000000', new Date(2023, 10, 26), new Date(2023, 11, 09)],
+        [ 'WP2: Environmental Impact Assessment', 'Step2 Culture experiments report accepted','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #000000', new Date(2023, 11, 09), new Date(2023, 11, 09)],
+        [ 'WP2: Environmental Impact Assessment', 'Review meeting lessons learned','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000000', new Date(2023, 11, 16), new Date(2023, 11, 16)],
+        [ 'WP2: Gas phase CO2 capture project', 'Literature review of dynamic modelling of amine carbon capture','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #800000', new Date(2022, 04, 20), new Date(2022, 05, 20)],
+        [ 'WP2: Gas phase CO2 capture project', 'Dynamic model development','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #800000', new Date(2022, 05, 20), new Date(2022, 11, 20)],
+        [ 'WP2: Gas phase CO2 capture project', 'Dynamic model sensitivity analysis/data collection','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #800000', new Date(2022, 08, 20), new Date(2022, 09, 21)],
+        [ 'WP2: Gas phase CO2 capture project', 'Dynamic model optimisation','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #800000', new Date(2022, 09, 22), new Date(2022, 11, 22)],
+        [ 'WP2: Gas phase CO2 capture project', 'Report preparation','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #800000', new Date(2022, 11, 23), new Date(2022, 12, 23)],
+        [ 'WP2: Gas phase CO2 capture project', 'Dynamic model control philosophy','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #800000', new Date(2022, 12, 23), new Date(2022, 12, 23)],
+        [ 'WP2: Gas phase CO2 capture project', 'Review meeting lessons learned','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #800000', new Date(2023, 01, 09), new Date(2023, 01, 09)],
+        [ 'WP2: pH manipulation project', 'pH manipulation strategy investigation','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2022, 04, 20), new Date(2022, 07, 20)],
+        [ 'WP2: pH manipulation project', 'pH manipulation strategy decision','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2022, 07, 20), new Date(2022, 07, 20)],
+        [ 'WP2: pH manipulation project', 'Match pH manipulation technologies to scale-up options','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2023, 07, 20), new Date(2023, 09, 20)],
+        [ 'WP2: pH manipulation project', 'Simulate energy use optimisation within pH manipulation ','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2023, 09, 22), new Date(2023, 11, 22)],
+        [ 'WP2: pH manipulation project', 'pH options as a function of scaleup report written','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2023, 11, 22), new Date(2023, 12, 04)],
+        [ 'WP2: pH manipulation project', 'pH options as a function of scaleup report accepted','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2023, 12, 04), new Date(2023, 12, 04)],
+        [ 'WP2: pH manipulation project', 'Review meeting lessons learned','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2023, 12, 11), new Date(2023, 12, 11)],
+        [ 'WP2: Scale-up economics', 'Global scale modelling','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2023, 04, 20), new Date(2023, 10, 19)],
+        [ 'WP2: Scale-up economics', 'Global scale-up report written','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2023, 10, 20), new Date(2023, 11, 03)],
+        [ 'WP2: Scale-up economics', 'Global scale-up report accepted','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2023, 11, 03), new Date(2023, 11, 03)],
+        [ 'WP2: Scale-up economics', 'Assessment of co-location options','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2023, 09, 20), new Date(2024, 09, 20)],
+        [ 'WP2: Scale-up economics', 'System cost reductions','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2023, 09, 20), new Date(2024, 08, 20)],
+        [ 'WP2: Scale-up economics', 'Co-location options & cost reduction report written','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2024, 08, 23), new Date(2024, 09, 06)],
+        [ 'WP2: Scale-up economics', 'Co-location options & cost reduction report accepted','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2024, 09, 06), new Date(2024, 09, 06)],
+        [ 'WP2: Commercialisation', 'Barriers and risks to commercialisation investigation','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2023, 01, 09), new Date(2023, 04, 05)],
+        [ 'WP2: Commercialisation', 'Accelerator funding','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2023, 04, 20), new Date(2024, 04, 18)],
+        [ 'WP2: Commercialisation', 'Accelerator output report  written','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2024, 10, 21), new Date(2024, 11, 04)],
+        [ 'WP2: Commercialisation', 'Accelerator output report accepted','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2024, 11, 04), new Date(2024, 11, 04)],
+        [ 'WP2: Life Cycle Analysis', 'ID system components and consumables','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2024, 06, 03), new Date(2024, 09, 02)],
+        [ 'WP2: Life Cycle Analysis', 'Analysis (cross refrence with database)','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2024, 09, 02), new Date(2024, 12, 02)],
+        [ 'WP2: Life Cycle Analysis', 'LCA summary report written','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2024, 09, 03), new Date(2024, 12, 03)],
+        [ 'WP2: Life Cycle Analysis', 'LCA summary report accepted','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2024, 12, 03), new Date(2024, 12, 03)],
+        [ 'WP2: Social value', 'Knowledge Exchange workshop planning','color: #ADD8E6;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2024, 03, 20), new Date(2024, 06, 20)],
+        [ 'WP2: Social value', 'Knowledge Exdchange workshop: Impacts & Licensing','color: #000000;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2024, 06, 20), new Date(2024, 06, 20)],
+        [ 'WP3: Management', 'Manage  work streams','color: #90ee90;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2022, 04, 20), new Date(2025, 03, 31)],
+        [ 'WP3: Management', 'Manage Implementation & Verification','color: #90ee90;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2022, 04, 20), new Date(2025, 03, 31)],
+        [ 'WP3: Management', 'Manage project outputs','color: #90ee90;' + 'stroke-width: 1.5;' + 'stroke-color: #000080', new Date(2022, 04, 20), new Date(2025, 03, 31)],
+
+    ]);
+
+
+      
+    chart.draw(dataTable);
+  }
+
+ 
+
+</script>
+
+
+
+
+<div id="timeline" style="height: 2000px;width: 2000px;"></div>
+</html>
+
+
