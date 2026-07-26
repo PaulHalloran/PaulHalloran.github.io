@@ -12,4 +12,4 @@ Led by Halloran and funded by the Carbon to Sea Initiative, this project is work
 
 [Co-created research description (live)](https://paulhalloran.github.io/SeaCURE_files/index.html){:target="_blank"}
 
-![co-creation process]({{ '/assets/img/cocreation_process.png' | relative_url }})
+![co-creation process]({{ '/assets/img/cocreation_process.png' | relative_url }}){: style="width: 80vw; max-width: 100%; height: auto;" }
