@@ -3,7 +3,7 @@ layout: page
 title: COMFORT
 description: OUR COMMON FUTURE OCEAN IN THE EARTH SYSTEM
 img: assets/img/EU.png
-importance: 2
+importance: 5
 category: work
 related_publications: false
 ---
