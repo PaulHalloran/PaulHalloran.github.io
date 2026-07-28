@@ -3,7 +3,7 @@ layout: page
 title: ImageFlow
 description: ImageFlow
 img: assets/img/NERC_logo.png
-importance: 4
+importance: 7
 category: work
 related_publications: false
 ---

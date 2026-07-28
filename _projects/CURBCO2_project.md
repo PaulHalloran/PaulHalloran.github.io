@@ -3,7 +3,7 @@ layout: page
 title: CURBCO2
 description: Carbon Uptake Revisited – Biases Corrected using Ocean Observations
 img: assets/img/NERC_logo.png
-importance: 1
+importance: 6
 category: work
 related_publications: false
 ---

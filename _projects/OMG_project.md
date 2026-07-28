@@ -3,7 +3,7 @@ layout: page
 title: OMG The Southern Ocean Bias
 description: Observing and Modelling trace Gases to explore the Southern Ocean temperature Bias
 img: assets/img/NERC_logo.png
-importance: 3
+importance: 5
 category: work
 related_publications: false
 ---

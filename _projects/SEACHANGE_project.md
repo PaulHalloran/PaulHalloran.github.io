@@ -3,7 +3,7 @@ layout: page
 title: SEACHANGE
 description: Setting new baselines for understanding ocean environmental change
 img: assets/img/SeaChangeLogo.png
-importance: 1
+importance: 3
 category: work
 related_publications: false
 ---

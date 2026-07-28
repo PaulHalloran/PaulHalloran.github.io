@@ -3,7 +3,7 @@ layout: page
 title: Convex Seascape
 description: UK government funded project to develop, design and implement a novel maine CDR approach, and holistically understand its potential
 img: assets/img/ConvexSeascape.jpg
-importance: 1
+importance: 3
 category: work
 related_publications: false
 ---

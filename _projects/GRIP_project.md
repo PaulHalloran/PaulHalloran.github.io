@@ -3,7 +3,7 @@ layout: page
 title: GRIP
 description: Global Reef Impact Projections
 img: assets/img/NERC_logo.png
-importance: 2
+importance: 6
 category: work
 related_publications: false
 ---

@@ -3,7 +3,7 @@ layout: page
 title: CLAM
 description: Climate of the Last Millennium
 img: assets/img/NERC_logo.png
-importance: 2
+importance: 5
 category: work
 related_publications: false
 ---
