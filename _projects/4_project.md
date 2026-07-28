@@ -1,6 +1,6 @@
 ---
 layout: page
-title: SeaCURE: Sea Carbon Uptake and REmoval
+title: SeaCURE Sea Carbon Uptake and REmoval
 description: UK government funded project to develop, design and implement a novel maine CDR approach, and holistically understand its potential
 img: assets/img/seacure_process.png
 importance: 1
