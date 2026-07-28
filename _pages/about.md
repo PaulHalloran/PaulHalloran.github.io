@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <a href='#'>Affiliations</a>. University of Exeter, Faculty of Environment, Science and Economy, Geography
 
 profile:
   align: right
@@ -33,4 +33,6 @@ Building on his multi-disciplinary background, Paul’s group tackles questions 
 
 After his PhD, Paul joined the Met Office Hadley Centre , where he worked as a scientist and later senior scientist in ocean biogeochemical modeling. He contributed significantly to the development and application of the Earth System Model HadGEM2-ES, investigating biogeochemical feedbacks, aerosol impacts, and system reversibility.
 
-# Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+<!--
+Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+-->
