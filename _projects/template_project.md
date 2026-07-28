@@ -3,9 +3,10 @@ layout: page
 title: project 5
 description: a project with a background image
 img: assets/img/1.jpg
-importance: 3
+importance: 
 category: fun
 ---
+<!-- NOTE I've rempved teh importance value from the template so it is not displayed. Add a number back in to display.-->
 
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
