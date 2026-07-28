@@ -8,6 +8,12 @@ nav_order: 6
 calendar: true
 ---
 
+# Current undergraduate teaching
+
+## GEO2334: Research Design in Physical Geography
+
+## GEO3321: Physical Geography Dissertation
+
 
 # Previous undergraduate teaching
 
@@ -23,7 +29,10 @@ Our planet has experienced massive change in its history, but never before have 
 This module provides our students with an advanced training in research methods used by physical scientists. It is designed to prepare our students for undertaking research within and beyond the university environment and seeks to equip them with key employability attributes for professional careers. The module explores a range of quantitative methods that physical scientist use in research and their applications for wider society. The computing component of this module follows an innovative independent study and support approach designed around the Raspberry Pi computer. Our students use the Raspberry Pi to build temperature and humidity loggers, then integrate the datasets they collect with sophisticated statistical analysis.
 
 ## GEO1207: Earth Systems
+
+
 ## GEO1210: Investigating Physical Geography: Slapton field trip
+
 ## GEO1308: Jurassic Coast Field Trip
 
 # Previous masters teaching
