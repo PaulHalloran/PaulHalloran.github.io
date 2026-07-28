@@ -1,7 +1,7 @@
 ---
 layout: page
-title: SeaCURE Sea Carbon Uptake and REmoval
-description: UK government funded project to develop, design and implement a novel maine CDR approach, and holistically understand its potential
+title: ABC Fluxes
+description: NERC funded directed program to explore biogeochemistry to compliment the RAPID array
 img: assets/img/NERC_logo.png
 importance: 1
 category: work
