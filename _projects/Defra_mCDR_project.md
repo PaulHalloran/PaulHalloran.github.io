@@ -3,7 +3,7 @@ layout: page
 title: Marine CDR impacts and governance fitness
 description: Review of marine CDR impacts and governance fitness for Defra
 img: assets/img/Defra_review_2025.png
-importance: 1
+importance: 2
 category: work
 related_publications: false
 ---

@@ -3,7 +3,7 @@ layout: page
 title: SeaCURE Social Licence and OAE permitting
 description: Philanthropically funded project focused on understanding the social licence for the SeaCURE plant and research
 img: assets/img/workshop_cutout_photo.png
-importance: 3
+importance: 2
 category: work
 related_publications: false
 ---

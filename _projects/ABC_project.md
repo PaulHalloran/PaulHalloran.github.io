@@ -3,7 +3,7 @@ layout: page
 title: ABC Fluxes
 description: NERC funded directed program to explore biogeochemistry to compliment the RAPID array
 img: assets/img/NERC_logo.png
-importance: 1
+importance: 3
 category: work
 related_publications: false
 ---
