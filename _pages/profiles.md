@@ -15,7 +15,7 @@ profiles:
     image_circular: true # crops the image to make it circular
     more_info: >
   - align: left
-    image: beatriz_pic.jpg
+    image: BeatrizArellanoNava.jpg
     content: about_beatriz.md
     image_circular: true # crops the image to make it circular
     more_info: >
@@ -54,9 +54,6 @@ profiles:
     content: SarahHolmes.md
     image_circular: true # crops the image to make it circular
     more_info: >
-      <p>555 your office number</p>
-      <p>123 your address street</p>
-      <p>Your City, State 12345</p>
   - align: left
     image: BethLangley.jpg
     content: BethLangley.md
@@ -68,7 +65,7 @@ profiles:
     image_circular: true # crops the image to make it circular
     more_info: >
   - align: left
-    image: AliceLebehot.jpg
+    image: user-placeholder.png
     content: AliceLebehot.md
     image_circular: true # crops the image to make it circular
     more_info: >

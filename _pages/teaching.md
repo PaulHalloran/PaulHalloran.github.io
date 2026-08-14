@@ -9,13 +9,21 @@ calendar: true
 ---
 
 # Current undergraduate teaching
+<br/><br/>
+
 
 ## GEO2334: Research Design in Physical Geography
+Teaching the skills required to design and deliver a novel piece of research or really any large innovative project.
 
 ## GEO3321: Physical Geography Dissertation
+Helping students right the way through from identifying interesting questions, conceiving a project idea, developing that idea and delivering a novel scientific dissertation.
 
+
+<br/><br/>
+<br/><br/>
 
 # Previous undergraduate teaching
+<br/><br/>
 
 ## GEO3231: The Ocean and Climate (convenor)
 
@@ -30,23 +38,34 @@ This module provides our students with an advanced training in research methods 
 
 ## GEO1207: Earth Systems
 
+An inherited module that gave an overview of the major natural systems functioning on our planet.
 
 ## GEO1210: Investigating Physical Geography: Slapton field trip
 
+Teaching on a multi-day 1st year fieldtrip on the South coast of Devon, spanning palaeoclimate reconstruction, thorugh to contemporary water quality.
+
 ## GEO1308: Jurassic Coast Field Trip
+
+<br/><br/>
+<br/><br/>
 
 # Previous masters teaching
 
-GEOM410: Key Themes in Climate Change Impacts and Feedbacks
+<br/><br/>
+
+## GEOM410: Key Themes in Climate Change Impacts and Feedbacks
+
+<br/><br/>
+<br/><br/>
 
 # Summer schools
-
+ <br/><br/>
 ## SuMMER summer school, Exeter
-
+ <br/><br/>
 ## ARAMAC summer school, Croatia
-
+<br/><br/>
 ## Edinburough Greenhouse Gas Summer School
-
+<br/><br/>
 ## NCAS Climate Modelling Summer School
-
+<br/><br/>
 ## Generating Genius, Outreach
